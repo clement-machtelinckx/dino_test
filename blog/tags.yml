@@ -17,3 +17,8 @@ hola:
   label: Hola
   permalink: /hola
   description: Hola tag description
+
+test:
+  label: Test
+  permalink: /test
+  description: Test tag description
