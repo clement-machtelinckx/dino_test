@@ -1,39 +1,11 @@
-yangshun:
-  name: Yangshun Tay
-  title: Ex-Meta Staff Engineer, Co-founder GreatFrontEnd
-  url: https://linkedin.com/in/yangshun
-  image_url: https://github.com/yangshun.png
-  page: true
-  socials:
-    x: yangshunz
-    linkedin: yangshun
-    github: yangshun
-    newsletter: https://www.greatfrontend.com
-
-slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
-  page:
-    # customize the url of the author page at /blog/authors/<permalink>
-    permalink: '/all-sebastien-lorber-articles'
-  socials:
-    x: sebastienlorber
-    linkedin: sebastienlorber
-    github: slorber
-    newsletter: https://thisweekinreact.com
-
-Yazii:
+yazii:
   name: Yazii
-  title: Docusaurus maintainer
+  title: Lore Architect
   url: https://yazii.com
-  image_url: https://github.com/yazii.png
+  image_url: https://avatars.githubusercontent.com/u/130674608?s=400&u=0ce972f974a1e4997c306ba4baca608167876a1b&v=4
   page:
     # customize the url of the author page at /blog/authors/<permalink>
     permalink: '/all-yazii-articles'
   socials:
-    x: yazii
-    linkedin: yazii
-    github: yazii
-    newsletter: https://www.getrevue.co/profile/yazii
+    github: clement-machtelinckx
+

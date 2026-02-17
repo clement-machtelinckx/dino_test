@@ -1,5 +1,5 @@
 
-test:
-  label: Test
-  permalink: /test
-  description: Test tag description
+resume:
+  label: Résume
+  permalink: /resume
+  description: tag resume session

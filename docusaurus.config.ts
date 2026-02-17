@@ -55,7 +55,7 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: 'img/docusaurus-social-card.jpg',
+    image: undefined,
     colorMode: {
       respectPrefersColorScheme: true,
     },
@@ -69,6 +69,7 @@ const config: Config = {
       items: [
         { to: '/rules', label: 'Règles & Lore', position: 'left' },
         { to: '/sessions', label: 'Sessions', position: 'left' },
+
         {
           href: 'https://github.com/clement-machtelinckx/dino_test',
           label: 'GitHub',

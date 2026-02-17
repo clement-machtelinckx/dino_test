@@ -16,6 +16,8 @@ export default function Home(): ReactNode {
     <Layout>
       <main>
         <h1>{siteConfig.title}</h1>
+        <p>{siteConfig.tagline}</p>
+        <Link to="/sessions">Aller au résumer des sessions</Link>
       </main>
     </Layout>
   );
