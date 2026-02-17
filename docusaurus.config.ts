@@ -54,6 +54,20 @@ const config: Config = {
     ],
   ],
 
+  themes: [
+    [
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      {
+        hashed: true,
+        language: ['fr'],
+        indexDocs: true,
+        indexBlog: true,
+        docsRouteBasePath: '/rules',
+        blogRouteBasePath: '/sessions',
+      },
+    ],
+  ],
+
   themeConfig: {
     image: undefined,
     colorMode: {
@@ -69,7 +83,7 @@ const config: Config = {
       items: [
         { to: '/rules', label: 'Règles & Lore', position: 'left' },
         { to: '/sessions', label: 'Sessions', position: 'left' },
-
+        { type: 'search', position: 'right' },
         {
           href: 'https://github.com/clement-machtelinckx/dino_test',
           label: 'GitHub',
