@@ -29,14 +29,14 @@ const config: Config = {
       'classic',
       {
         docs: {
-          path: 'rules',              // dossier
-          routeBasePath: 'rules',     // URL
+          path: 'docs',              // dossier
+          routeBasePath: 'docs',     // URL
           sidebarPath: './sidebars.ts',
           editUrl: 'https://github.com/clement-machtelinckx/dino_test',
         },
         blog: {
-          path: 'sessions',           // dossier
-          routeBasePath: 'sessions',  // URL
+          path: 'blog',           // dossier
+          routeBasePath: 'blog',  // URL
           showReadingTime: true,
           feedOptions: {
             type: ['rss', 'atom'],
@@ -62,8 +62,8 @@ const config: Config = {
         language: ['fr'],
         indexDocs: true,
         indexBlog: true,
-        docsRouteBasePath: '/rules',
-        blogRouteBasePath: '/sessions',
+        docsRouteBasePath: '/docs',
+        blogRouteBasePath: '/blog',
       },
     ],
   ],
@@ -81,8 +81,8 @@ const config: Config = {
         src: 'img/logo.svg',
       },
       items: [
-        { to: '/rules', label: 'Règles & Lore', position: 'left' },
-        { to: '/sessions', label: 'Sessions', position: 'left' },
+        { to: '/docs', label: 'docs', position: 'left' },
+        { to: '/blog', label: 'Blogs', position: 'left' },
         { type: 'search', position: 'right' },
         {
           href: 'https://github.com/clement-machtelinckx/dino_test',
@@ -98,8 +98,8 @@ const config: Config = {
         {
           title: 'Contenu',
           items: [
-            { label: 'Règles & Lore', to: '/rules' },
-            { label: 'Sessions', to: '/sessions' },
+            { label: 'Règles & Lore', to: '/docs' },
+            { label: 'Blogs', to: '/blog' },
           ],
         },
         {
