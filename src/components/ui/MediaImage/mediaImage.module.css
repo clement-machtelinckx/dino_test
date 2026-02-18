@@ -1,0 +1,28 @@
+.wrap {
+    width: 100%;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+/* aspect ratios */
+._1_1 {
+    aspect-ratio: 1 / 1;
+}
+
+._4_3 {
+    aspect-ratio: 4 / 3;
+}
+
+._16_9 {
+    aspect-ratio: 16 / 9;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}

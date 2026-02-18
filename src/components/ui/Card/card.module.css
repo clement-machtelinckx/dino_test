@@ -1,0 +1,39 @@
+.mkCard {
+    overflow: hidden;
+}
+
+.top {
+    position: relative;
+    height: 92px;
+    background: var(--ifm-color-primary);
+}
+
+.top::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 16px;
+    background: rgba(255, 255, 255, 0.35);
+    clip-path: polygon(0 55%, 100% 0, 100% 100%, 0 100%);
+}
+
+.icon {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+}
+
+.icon>* {
+    width: 44px;
+    height: 44px;
+}
+
+.title {
+    margin: 0;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}

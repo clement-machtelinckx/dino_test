@@ -81,6 +81,10 @@ const config: Config = {
         src: 'img/logo.svg',
       },
       items: [
+        { to: '/solution', label: 'Solution', position: 'left' },
+        { to: '/partenaire', label: 'Partenaire', position: 'left' },
+        { to: '/reseau', label: 'Réseau', position: 'left' },
+        { to: '/contact', label: 'Contact', position: 'left' },
         { to: '/docs', label: 'docs', position: 'left' },
         { to: '/blog', label: 'Blogs', position: 'left' },
         { type: 'search', position: 'right' },
@@ -96,19 +100,29 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Contenu',
+          title: "Cabinet Mark'assur",
           items: [
-            { label: 'Règles & Lore', to: '/docs' },
-            { label: 'Blogs', to: '/blog' },
+            { label: "Mentions légales et médiateur", to: '/legal/mentions-legales' },
+            { label: "Politique cookie", to: '/legal/politique-cookie' },
+            { label: "Politique de confidentialité", to: '/legal/politique-de-confidentialite' },
+          ]
+        },
+        {
+          title: 'Contact',
+          items: [
+            { label: 'TEL Service gestion', to: 'tel:0320000000' },
+            { label: 'TEL service Commercial', to: 'tel:0320000001' },
+            { label: 'Mail DU CABINET', to: 'mailto:contact@markassur.fr' }
           ],
         },
         {
-          title: 'Code',
+          title: 'Menu',
           items: [
-            {
-              label: 'GitHub',
-              href: 'https://github.com/clement-machtelinckx/dino_test',
-            },
+            { label: 'Acceuil', to: '/' },
+            { label: 'Solution', to: '/solution' },
+            { label: 'devenir partenaire', to: '/partenaire' },
+            { label: 'notre résseau', to: '/reseau' },
+            { label: 'contact', to: '/contact' },
           ],
         },
       ],
