@@ -85,7 +85,7 @@ const config: Config = {
         { to: '/partenaire', label: 'Partenaire', position: 'left' },
         { href: 'https://lapigroupe.fr/courtiers-lapi-groupe/', label: 'Réseau', position: 'left' },
         { to: '/contact', label: 'Contact', position: 'left' },
-        { to: '/test', label: 'Test', position: 'left' },
+        { to: '/opportunities-test', label: 'Test', position: 'left' },
         { to: '/docs', label: 'docs', position: 'left' },
         { to: '/blog', label: 'Blogs', position: 'left' },
         { type: 'search', position: 'right' },
