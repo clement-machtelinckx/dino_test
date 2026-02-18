@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Boilerplate',
-  tagline: 'Règles & Lore + Résumés de sessions',
+  tagline: 'Boilerplate pour site vitrine',
   favicon: 'img/favicon.ico',
 
   future: {
@@ -83,8 +83,9 @@ const config: Config = {
       items: [
         { to: '/solution', label: 'Solution', position: 'left' },
         { to: '/partenaire', label: 'Partenaire', position: 'left' },
-        { to: '/reseau', label: 'Réseau', position: 'left' },
+        { href: 'https://lapigroupe.fr/courtiers-lapi-groupe/', label: 'Réseau', position: 'left' },
         { to: '/contact', label: 'Contact', position: 'left' },
+        { to: '/test', label: 'Test', position: 'left' },
         { to: '/docs', label: 'docs', position: 'left' },
         { to: '/blog', label: 'Blogs', position: 'left' },
         { type: 'search', position: 'right' },

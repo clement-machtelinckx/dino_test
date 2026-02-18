@@ -1,3 +1,8 @@
+---
+title: Politique d’utilisation des cookies
+description: Politique d’utilisation des cookies du site
+---
+
 ## Politique d’utilisation des cookies
 URL: https://markassur.com/politique-dutilisation-des-cookies/
 

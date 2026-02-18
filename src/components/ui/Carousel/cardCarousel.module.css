@@ -1,0 +1,30 @@
+.wrap :global(.swiper) {
+    padding: 8px 6px 34px;
+    /* espace pour l’ombre + bullets */
+}
+
+.slide {
+    height: auto;
+}
+
+/* bullets */
+.wrap :global(.swiper-pagination-bullet) {
+    opacity: 0.25;
+}
+
+.wrap :global(.swiper-pagination-bullet-active) {
+    opacity: 1;
+    background: var(--ifm-color-primary);
+}
+
+/* flèches */
+.wrap :global(.swiper-button-next),
+.wrap :global(.swiper-button-prev) {
+    color: var(--ifm-color-primary);
+}
+
+/* rendre les flèches un peu plus “petites” */
+.wrap :global(.swiper-button-next::after),
+.wrap :global(.swiper-button-prev::after) {
+    font-size: 18px;
+}

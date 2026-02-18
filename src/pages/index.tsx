@@ -14,7 +14,7 @@ import styles from './index.module.css';
 export default function Home(): ReactNode {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <Layout>
+    <Layout title="{siteConfig.title}">
       <main className="container margin-vert--lg">
         <MediaImage
           src="/img/Medium-Logo-transparent--768x356.png"

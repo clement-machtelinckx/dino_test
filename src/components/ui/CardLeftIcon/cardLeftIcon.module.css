@@ -45,6 +45,11 @@
     line-height: 1.6;
 }
 
+.wrap {
+    height: 100%;
+}
+
+
 @media (max-width: 996px) {
     .wrap {
         padding: 16px;

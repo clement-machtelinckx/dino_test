@@ -1,3 +1,7 @@
+---
+title: Mentions légales
+description: Mentions légales du site
+---
 
 ## mention-legale – markassur.com
 URL: https://markassur.com/mention-legale/

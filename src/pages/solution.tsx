@@ -5,6 +5,8 @@ import { MediaImage } from "../components/ui/MediaImage/MediaImage";
 import { mdiSkull } from '@mdi/js';
 import { Card } from "../components/ui/Card/Card";
 import { Button } from "../components/ui/Button/Button";
+import Link from "@docusaurus/Link";
+import { FeatureGrid, FeatureGridItem } from "../components/ui/FeatureGrid/FeatureGrid";
 
 export default function Solution(): ReactNode {
     return (
@@ -18,26 +20,21 @@ export default function Solution(): ReactNode {
                         efficaces et totalement adaptées à la protection des appareillages.
                     </p>
                 </div>
-                <div className="row">
-
-
-                    <div className="col col--4">
+                <FeatureGrid cols={3}>
+                    <FeatureGridItem >
                         <Card title="GARANTIE PERTE"
                             topIcon={< Icon path={mdiSkull} />}
                         >
-
                             <p>
                                 Cette couverture est pertinente pour des appareils de petite taille,
                                 elle offre la possibilité de remplacer le dispositif égaré en l’absence
                                 d’une participation des dispositifs des régimes obligatoires et mutuelles.*
                             </p>
-                            <Button variant="primary" size="md">
-                                Voir les détails
-                            </Button>
-                        </Card>
-                    </div>
 
-                    <div className="col col--4">
+                        </Card>
+                    </FeatureGridItem>
+
+                    <FeatureGridItem>
                         <Card title="GARANTIE VOL"
                             topIcon={< Icon path={mdiSkull} />}
                         >
@@ -46,13 +43,11 @@ export default function Solution(): ReactNode {
                                 son audioprothèse. Elle entre en jeu lorsque l'appareil est dérobé, que
                                 ce soit par effraction, agression ou à l'insu de son propriétaire.*
                             </p>
-                            <Button variant="primary" size="md">
-                                Voir les détails
-                            </Button>
-                        </Card>
-                    </div>
 
-                    <div className="col col--4" >
+                        </Card>
+                    </FeatureGridItem>
+
+                    <FeatureGridItem >
                         <Card title="GARANTIE CASSE"
                             topIcon={< Icon path={mdiSkull} />}
                         >
@@ -62,12 +57,20 @@ export default function Solution(): ReactNode {
                                 ou le remplacement de l'appareil endommagé, permettant ainsi à l'assuré de
                                 retrouver rapidement l'usage de son dispositif auditif.*
                             </p>
-                            <Button variant="primary" size="md">
-                                Voir les détails
-                            </Button>
+
                         </Card>
-                    </div>
+                    </FeatureGridItem>
+                </FeatureGrid>
+                <div className="mkRow margin-top--lg">
+                    <p className="text--center margin-top--sm" style={{ margin: 0 }}>
+                        * Sous réserve des conditions spécifiques énoncées dans le contrat d'assurance.
+                    </p>
+
+                    <Link className="button button--primary button--md" to="/contact">
+                        Voir les détails
+                    </Link>
                 </div>
+
                 <div className="row row--align-center margin-top--xl">
                     <div className="col col--6">
                         <h1>Les appareils assurés</h1>

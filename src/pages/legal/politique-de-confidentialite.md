@@ -1,3 +1,7 @@
+---
+title: Politique de confidentialité
+description: politique de confidentialiter du site 
+---
 
 ## Politique de confidentialité
 URL: https://markassur.com/politique-de-confidentialite-2/
