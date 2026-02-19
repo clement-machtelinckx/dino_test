@@ -81,9 +81,9 @@ const config: Config = {
         src: 'img/logo.svg',
       },
       items: [
-        { to: '/solution', label: 'Solution', position: 'left' },
-        { to: '/partenaire', label: 'Partenaire', position: 'left' },
-        { href: 'https://lapigroupe.fr/courtiers-lapi-groupe/', label: 'Réseau', position: 'left' },
+        { to: '/garanties', label: 'Garanties audioprotheses', position: 'left' },
+        { to: '/protection', label: 'Protection de votre activité', position: 'left' },
+        // { href: 'https://lapigroupe.fr/courtiers-lapi-groupe/', label: 'Réseau', position: 'left' },
         { to: '/contact', label: 'Contact', position: 'left' },
         // { to: '/opportunities-test', label: 'Test', position: 'left' },
         // { to: '/docs', label: 'docs', position: 'left' },

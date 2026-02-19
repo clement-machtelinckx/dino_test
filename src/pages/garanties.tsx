@@ -8,10 +8,33 @@ import { Button } from "../components/ui/Button/Button";
 import Link from "@docusaurus/Link";
 import { FeatureGrid, FeatureGridItem } from "../components/ui/FeatureGrid/FeatureGrid";
 
-export default function Solution(): ReactNode {
+export default function Garanties(): ReactNode {
     return (
         <Layout title="Nos garanties">
             <main className="container margin-vert--lg">
+                <section>
+                    <FeatureGrid cols={2}>
+
+                        <FeatureGridItem>
+                            <div>
+                                <h1>Assurance appareil auditif</h1>
+                                <p>Audioprothésistes, sécurisez chaque appareillage proposez avias patiens une sérénité totale.
+                                    Assurance Perte, Vol, Casse
+                                </p>
+                                <Link to="/contact" className="mkBtn mkBtn--primary">Prendre RDV</Link>
+                            </div>
+                        </FeatureGridItem>
+
+                        <FeatureGridItem>
+
+                            <MediaImage
+                                src="/img/femme_appareil.png"
+                                alt="Appareil auditif"
+                                ratio="1:1"
+                            />
+                        </FeatureGridItem>
+                    </FeatureGrid>
+                </section>
                 <div className="margin-bottom--lg">
                     <h1>Nos garanties</h1>
                     <p>
@@ -66,7 +89,7 @@ export default function Solution(): ReactNode {
                         * Sous réserve des conditions spécifiques énoncées dans le contrat d'assurance.
                     </p>
 
-                    <Link className="button button--primary button--md" to="/contact">
+                    <Link className="mkBtn mkBtn--primary" to="/contact">
                         Voir les détails
                     </Link>
                 </div>
@@ -93,6 +116,23 @@ export default function Solution(): ReactNode {
                             ratio="1:1"
                         />
                     </div>
+                </div>
+
+                <div>
+                    <div>
+                        <h1 className="h1">Nos chiffres clés audioprothèses</h1>
+                    </div>
+                    <FeatureGrid cols={3} className="margin-top--lg">
+                        <FeatureGridItem>
+                            <h3>+ 600 000 Appareils Assurés </h3>
+                        </FeatureGridItem>
+                        <FeatureGridItem>
+                            <h3>+ 9 000 sinistres pris en charge / an</h3>
+                        </FeatureGridItem>
+                        <FeatureGridItem>
+                            <h3>+ 3000 centres auditifs partenaires </h3>
+                        </FeatureGridItem>
+                    </FeatureGrid>
                 </div>
             </main>
         </Layout >
