@@ -3,8 +3,8 @@ import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'Boilerplate',
-  tagline: 'Boilerplate pour site vitrine',
+  title: "Protec'audio",
+  tagline: "Site vitrine de Protec'audio",
   favicon: 'img/favicon.ico',
 
   future: {
@@ -14,8 +14,8 @@ const config: Config = {
   url: 'https://your-docusaurus-site.example.com',
   baseUrl: '/',
 
-  organizationName: 'clement-machtelinckx',
-  projectName: 'dino_test',
+  organizationName: "Protec'audio",
+  projectName: "Protec'audio",
 
   onBrokenLinks: 'throw',
 
@@ -75,9 +75,9 @@ const config: Config = {
     },
 
     navbar: {
-      title: 'Boilerplate',
+      title: "Protec'audio",
       logo: {
-        alt: 'Boilerplate',
+        alt: "Protec'audio",
         src: 'img/logo.svg',
       },
       items: [
@@ -85,50 +85,46 @@ const config: Config = {
         { to: '/partenaire', label: 'Partenaire', position: 'left' },
         { href: 'https://lapigroupe.fr/courtiers-lapi-groupe/', label: 'Réseau', position: 'left' },
         { to: '/contact', label: 'Contact', position: 'left' },
-        { to: '/opportunities-test', label: 'Test', position: 'left' },
-        { to: '/docs', label: 'docs', position: 'left' },
-        { to: '/blog', label: 'Blogs', position: 'left' },
-        { type: 'search', position: 'right' },
-        {
-          href: 'https://github.com/clement-machtelinckx/dino_test',
-          label: 'GitHub',
-          position: 'right',
-        },
+        // { to: '/opportunities-test', label: 'Test', position: 'left' },
+        // { to: '/docs', label: 'docs', position: 'left' },
+        // { to: '/blog', label: 'Blogs', position: 'left' },
+        // { type: 'search', position: 'right' },
+
       ],
     },
 
-    footer: {
-      style: 'dark',
-      links: [
-        {
-          title: "Cabinet Mark'assur",
-          items: [
-            { label: "Mentions légales et médiateur", to: '/legal/mentions-legales' },
-            { label: "Politique cookie", to: '/legal/politique-cookie' },
-            { label: "Politique de confidentialité", to: '/legal/politique-de-confidentialite' },
-          ]
-        },
-        {
-          title: 'Contact',
-          items: [
-            { label: 'TEL Service gestion', to: 'tel:0320000000' },
-            { label: 'TEL service Commercial', to: 'tel:0320000001' },
-            { label: 'Mail DU CABINET', to: 'mailto:contact@markassur.fr' }
-          ],
-        },
-        {
-          title: 'Menu',
-          items: [
-            { label: 'Acceuil', to: '/' },
-            { label: 'Solution', to: '/solution' },
-            { label: 'devenir partenaire', to: '/partenaire' },
-            { label: 'notre résseau', to: '/reseau' },
-            { label: 'contact', to: '/contact' },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} Boilerplate.`,
-    },
+    // footer: {
+    //   style: 'dark',
+    //   links: [
+    //     {
+    //       title: "Cabinet Mark'assur",
+    //       items: [
+    //         { label: "Mentions légales et médiateur", to: '/legal/mentions-legales' },
+    //         { label: "Politique cookie", to: '/legal/politique-cookie' },
+    //         { label: "Politique de confidentialité", to: '/legal/politique-de-confidentialite' },
+    //       ]
+    //     },
+    //     {
+    //       title: 'Contact',
+    //       items: [
+    //         { label: 'TEL Service gestion', to: 'tel:0320000000' },
+    //         { label: 'TEL service Commercial', to: 'tel:0320000001' },
+    //         { label: 'Mail DU CABINET', to: 'mailto:contact@markassur.fr' }
+    //       ],
+    //     },
+    //     {
+    //       title: 'Menu',
+    //       items: [
+    //         { label: 'Acceuil', to: '/' },
+    //         { label: 'Solution', to: '/solution' },
+    //         { label: 'devenir partenaire', to: '/partenaire' },
+    //         { label: 'notre résseau', to: '/reseau' },
+    //         { label: 'contact', to: '/contact' },
+    //       ],
+    //     },
+    //   ],
+    //   copyright: `Copyright © ${new Date().getFullYear()} Boilerplate.`,
+    // },
 
     prism: {
       theme: prismThemes.github,
