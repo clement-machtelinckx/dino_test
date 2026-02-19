@@ -1,4 +1,68 @@
 /* =========================================================
+   Infima overrides (Brand palette)
+   Base: #0b57d0
+========================================================= */
+
+:root {
+  /* Primary */
+  --ifm-color-primary: #0b57d0;
+  --ifm-color-primary-dark: #0a4db8;
+  --ifm-color-primary-darker: #0945a4;
+  --ifm-color-primary-darkest: #073b8c;
+  --ifm-color-primary-light: #0c61e8;
+  --ifm-color-primary-lighter: #166bf3;
+  --ifm-color-primary-lightest: #5593f6;
+
+  /* Link colors */
+  --ifm-link-color: var(--ifm-color-primary);
+  --ifm-link-hover-color: var(--ifm-color-primary-light);
+
+  /* Optional */
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* Protection page tokens (bars / pills) */
+  --mk-bar-bg: rgba(11, 87, 208, 0.55);
+  --mk-bar-border: rgba(11, 87, 208, 0.20);
+  --mk-bar-fg: rgba(255, 255, 255, 0.95);
+  --mk-bar-icon-bg: rgba(255, 255, 255, 0.16);
+
+  --mk-pill-border: rgba(11, 87, 208, 0.55);
+  --mk-pill-hover-bg: rgba(11, 87, 208, 0.10);
+  --mk-pill-hover-border: rgba(11, 87, 208, 0.70);
+
+  --mk-soft-bg: rgba(11, 87, 208, 0.06);
+}
+
+/* Dark mode palette */
+[data-theme="dark"] {
+  --ifm-color-primary: #5593f6;
+  --ifm-color-primary-dark: #3d84f5;
+  --ifm-color-primary-darker: #2977f4;
+  --ifm-color-primary-darkest: #1168f2;
+  --ifm-color-primary-light: #6da2f7;
+  --ifm-color-primary-lighter: #81aff8;
+  --ifm-color-primary-lightest: #99befa;
+
+  --ifm-link-color: var(--ifm-color-primary);
+  --ifm-link-hover-color: var(--ifm-color-primary-lightest);
+
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+  --mk-bar-bg: rgba(85, 147, 246, 0.45);
+  --mk-bar-border: rgba(153, 190, 250, 0.22);
+  --mk-bar-fg: rgba(255, 255, 255, 0.95);
+  --mk-bar-icon-bg: rgba(255, 255, 255, 0.14);
+
+  --mk-pill-border: rgba(85, 147, 246, 0.55);
+  --mk-pill-hover-bg: rgba(85, 147, 246, 0.14);
+  --mk-pill-hover-border: rgba(153, 190, 250, 0.55);
+
+  --mk-soft-bg: rgba(85, 147, 246, 0.10);
+
+}
+
+/* =========================================================
    Design tokens (vitrine)
    - Couleurs: dérivées d'Infima
    - Pas de hardcode dans les CSS modules
@@ -10,8 +74,7 @@
   --mk-text-muted: var(--ifm-color-emphasis-700);
 
   /* Titles */
-  --mk-title: #000;
-  /* si tu veux 100% Infima: var(--ifm-font-color-base) */
+  --mk-title: var(--ifm-font-color-base);
   --mk-title-accent: var(--ifm-color-primary);
 
   /* Surfaces / borders */
@@ -19,7 +82,7 @@
   --mk-border: var(--ifm-color-emphasis-300);
 
   /* Shadows */
-  --mk-shadow-sm: 0 8px 18px rgba(0, 0, 0, 0.10);
+  --mk-shadow-sm: 0 8px 18px rgba(0, 0, 0, 0.1);
   --mk-shadow-md: 0 12px 26px rgba(0, 0, 0, 0.14);
 
   /* Radius */
@@ -36,25 +99,21 @@
   --mk-space-8: 32px;
   --mk-space-10: 40px;
 
-  /* Buttons */
-  --mk-btn-bg: color-mix(in srgb, var(--ifm-color-primary) 65%, white);
+  /* Button tokens (fallback stable, no color-mix) */
+  --mk-btn-bg: rgba(11, 87, 208, 0.65);
   --mk-btn-fg: rgba(255, 255, 255, 0.92);
-  --mk-btn-border: color-mix(in srgb, var(--ifm-color-primary) 22%, transparent);
+  --mk-btn-border: rgba(11, 87, 208, 0.22);
 }
 
-[data-theme='dark'] {
-  --mk-title: var(--ifm-font-color-base);
-  --mk-btn-bg: color-mix(in srgb, var(--ifm-color-primary) 80%, black);
-  --mk-btn-fg: rgba(255, 255, 255, 0.92);
-  --mk-btn-border: color-mix(in srgb, var(--ifm-color-primary) 30%, transparent);
+[data-theme="dark"] {
+  --mk-btn-bg: rgba(85, 147, 246, 0.55);
+  --mk-btn-border: rgba(153, 190, 250, 0.25);
 }
 
 /* =========================================================
    Global utility classes (standard)
-   - OK dans custom.css: utilitaires + conventions globales
 ========================================================= */
 
-/* Sections */
 .mkSection {
   padding: var(--mk-space-10) 0;
 }
@@ -70,6 +129,10 @@
   letter-spacing: 0.02em;
   text-transform: uppercase;
   color: var(--mk-title-accent);
+}
+
+.mkTitleCenter {
+  text-align: center;
 }
 
 .mkH1 {
@@ -129,4 +192,14 @@
 .mkBtnArrow {
   font-size: 18px;
   line-height: 1;
+}
+
+/* Existing helper */
+.mkRow {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
 }

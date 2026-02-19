@@ -4,10 +4,10 @@ import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import Layout from "@theme/Layout";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+
 import { CardCarousel } from "../components/ui/Carousel/CardCarousel";
 import { MediaImage } from "../components/ui/MediaImage/MediaImage";
 import { FeatureGrid, FeatureGridItem } from "../components/ui/FeatureGrid/FeatureGrid";
-
 
 import styles from "./index.module.css";
 
@@ -16,7 +16,7 @@ export default function Home(): ReactNode {
 
   return (
     <Layout title={siteConfig.title}>
-      <main className={styles.page}>
+      <main className="container margin-vert--lg">
         {/* HERO */}
         <section className={styles.hero}>
           <div className={clsx("container", styles.container)}>
@@ -40,22 +40,18 @@ export default function Home(): ReactNode {
 
               <div className={styles.textBox}>
                 <p className={styles.p}>
-                  Depuis plus de 35 ans, nous accompagnons les professionnels du
-                  secteur de l’audioprothèse dans la protection et la sécurisation
-                  de leur activité. Nous développons également des solutions
+                  Depuis plus de 35 ans, nous accompagnons les professionnels du secteur de l’audioprothèse
+                  dans la protection et la sécurisation de leur activité. Nous développons également des solutions
                   d’assurance spécifiquement dédiées aux dispositifs auditifs.
                 </p>
 
                 <p className={styles.p}>
-                  Protec’audio propose des solutions d’assurance dédiées aux
-                  audioprothésistes, conçues pour couvrir les risques liés à leur
-                  exercice : responsabilité civile professionnelle, locaux,
-                  équipements et continuité d’activité.
+                  Protec’audio propose des solutions d’assurance dédiées aux audioprothésistes, conçues pour couvrir
+                  les risques liés à leur exercice : responsabilité civile professionnelle, locaux, équipements et continuité d’activité.
                 </p>
 
                 <p className={styles.pStrong}>
-                  Notre engagement : vous offrir une protection fiable, adaptée à
-                  votre métier et à ses exigences spécifiques.
+                  Notre engagement : vous offrir une protection fiable, adaptée à votre métier et à ses exigences spécifiques.
                 </p>
               </div>
 
@@ -71,29 +67,29 @@ export default function Home(): ReactNode {
         {/* SECTION 2 BLOCS */}
         <section className="mkSection">
           <div className="container">
-            <h2 className="mkTitle">Protégez votre activité professionnelle</h2>
+            <h2 className={clsx("mkTitle", "mkTitleCenter")}>
+              Protégez votre activité professionnelle
+            </h2>
 
             {/* Bloc 1 */}
             <div className={styles.block}>
               <div className={styles.blockGrid}>
                 <div className={styles.blockText}>
                   <p className="mkText">
-                    Nous vous accompagnons dans la protection globale de votre
-                    activité d’audioprothésiste, en prenant en considération les
-                    spécificités liées a la gestion de vos cabinets, de vos équipes et
-                    de vos partenaires professionnels.
+                    Nous vous accompagnons dans la protection globale de votre activité d’audioprothésiste,
+                    en prenant en considération les spécificités liées a la gestion de vos cabinets, de vos équipes
+                    et de vos partenaires professionnels.
                   </p>
 
                   <p className="mkText">
-                    Grâce à notre double expertise en assurance de personne et
-                    assurance dommage, nous analysons vos risques afin de
-                    sécuriser votre responsabilité professionnelle, vos locaux, votre
-                    matériel, et pour offrir à vos équipes une protection optimale.
+                    Grâce à notre double expertise en assurance de personne et assurance dommage, nous analysons vos risques
+                    afin de sécuriser votre responsabilité professionnelle, vos locaux, votre matériel, et pour offrir à vos équipes
+                    une protection optimale.
                   </p>
 
                   <p className="mkText">
-                    Notre approche vous permet de garantir la continuité de votre
-                    activité tout en maitrisant durablement votre budget d’assurance.
+                    Notre approche vous permet de garantir la continuité de votre activité tout en maitrisant durablement
+                    votre budget d’assurance.
                   </p>
 
                   <div className={styles.blockCta}>
@@ -116,7 +112,7 @@ export default function Home(): ReactNode {
 
             {/* Bloc 2 */}
             <div className={styles.block}>
-              <div className={clsx(styles.blockGrid, styles.blockGridReverse)}>
+              <div className={clsx(styles.blockGrid)}>
                 <div className={styles.blockMedia}>
                   <MediaImage
                     className={styles.diagram}
@@ -132,21 +128,18 @@ export default function Home(): ReactNode {
                   </h3>
 
                   <p className="mkText">
-                    L’audioprothésiste a une responsabilité directe envers ses
-                    patients, tant sur la qualité de l’appareillage que sur la
-                    sécurité, le suivi et la continuité de prise en charge.
+                    L’audioprothésiste a une responsabilité directe envers ses patients, tant sur la qualité de l’appareillage
+                    que sur la sécurité, le suivi et la continuité de prise en charge.
                   </p>
 
                   <p className="mkText">
-                    Nous vous proposons des solutions spécifiquement conçues
-                    pour protéger les dispositifs auditifs délivrés et sécuriser la
-                    relation de confiance entre vous et vos patients.
+                    Nous vous proposons des solutions spécifiquement conçues pour protéger les dispositifs auditifs délivrés
+                    et sécuriser la relation de confiance entre vous et vos patients.
                   </p>
 
                   <p className="mkText">
-                    Nos garanties permettent de faire face aux imprévus tout en
-                    assurant un accompagnement rapide et efficace, dans le
-                    respect des obligations professionnelles et réglementaires.
+                    Nos garanties permettent de faire face aux imprévus tout en assurant un accompagnement rapide et efficace,
+                    dans le respect des obligations professionnelles et réglementaires.
                   </p>
 
                   <div className={styles.blockCta}>
@@ -160,39 +153,45 @@ export default function Home(): ReactNode {
 
           </div>
         </section>
-        <div className="container margin-top--lg">
-          <CardCarousel
-            className="margin-top--lg"
-            items={[
-              { key: "1", content: <img src="/img/logo.svg" alt="Slide 1" /> },
-              { key: "2", content: <img src="/img/logo.svg" alt="Slide 2" /> },
-              { key: "3", content: <img src="/img/logo.svg" alt="Slide 3" /> },
-              { key: "4", content: <img src="/img/logo.svg" alt="Slide 4" /> },
-              { key: "5", content: <img src="/img/logo.svg" alt="Slide 5" /> },
-              { key: "6", content: <img src="/img/logo.svg" alt="Slide 6" /> },
 
-            ]}
-          />
+        {/* Carousel */}
+        <section className="mkSectionTight">
+          <div className="container">
+            <CardCarousel
+              className="margin-top--lg"
+              items={[
+                { key: "1", content: <img src="/img/logo.svg" alt="Slide 1" /> },
+                { key: "2", content: <img src="/img/logo.svg" alt="Slide 2" /> },
+                { key: "3", content: <img src="/img/logo.svg" alt="Slide 3" /> },
+                { key: "4", content: <img src="/img/logo.svg" alt="Slide 4" /> },
+                { key: "5", content: <img src="/img/logo.svg" alt="Slide 5" /> },
+                { key: "6", content: <img src="/img/logo.svg" alt="Slide 6" /> },
+              ]}
+            />
+          </div>
+        </section>
 
-        </div>
+        {/* Notre accompagnement */}
+        <section className="mkSectionTight">
+          <div className="container">
+            <h2 className={clsx("mkTitle", "mkTitleCenter")}>Notre accompagnement</h2>
 
-        <div className="container margin-top--lg">
-          <h1>Notre Accompagnement</h1>
-          <FeatureGrid cols={3} className="margin-top--lg">
-            <FeatureGridItem>
-              <h3>Assistance Et Support</h3>
-              <p>Une équipe dédiée pour accompagner et assister les audioprothésistes pour tous leur besoin en matière d’assurance.</p>
-            </FeatureGridItem>
-            <FeatureGridItem>
-              <h3>Zéro Papier, Tout Se Fait En Ligne</h3>
-              <p>La souscription et gestion de vos solutions d’assurances sont rapides, intuitives  et sécurisées.</p>
-            </FeatureGridItem>
-            <FeatureGridItem>
-              <h3>Assurance Sur-Mesure</h3>
-              <p>Une capacité unique à construire des solutions et des programmes simples et cohérents.</p>
-            </FeatureGridItem>
-          </FeatureGrid>
-        </div>
+            <FeatureGrid cols={3} className="margin-top--lg">
+              <FeatureGridItem>
+                <h3>Assistance et support</h3>
+                <p>Une équipe dédiée pour accompagner et assister les audioprothésistes pour tous leurs besoins en matière d’assurance.</p>
+              </FeatureGridItem>
+              <FeatureGridItem>
+                <h3>Zéro papier, tout se fait en ligne</h3>
+                <p>La souscription et gestion de vos solutions d’assurances sont rapides, intuitives et sécurisées.</p>
+              </FeatureGridItem>
+              <FeatureGridItem>
+                <h3>Assurance sur-mesure</h3>
+                <p>Une capacité unique à construire des solutions et des programmes simples et cohérents.</p>
+              </FeatureGridItem>
+            </FeatureGrid>
+          </div>
+        </section>
       </main>
     </Layout >
   );

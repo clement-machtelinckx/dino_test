@@ -4,7 +4,6 @@ import Icon from '@mdi/react';
 import { MediaImage } from "../components/ui/MediaImage/MediaImage";
 import { mdiSkull } from '@mdi/js';
 import { Card } from "../components/ui/Card/Card";
-import { Button } from "../components/ui/Button/Button";
 import Link from "@docusaurus/Link";
 import { FeatureGrid, FeatureGridItem } from "../components/ui/FeatureGrid/FeatureGrid";
 
@@ -26,7 +25,6 @@ export default function Garanties(): ReactNode {
                         </FeatureGridItem>
 
                         <FeatureGridItem>
-
                             <MediaImage
                                 src="/img/femme_appareil.png"
                                 alt="Appareil auditif"
@@ -134,6 +132,22 @@ export default function Garanties(): ReactNode {
                         </FeatureGridItem>
                     </FeatureGrid>
                 </div>
+
+                <FeatureGrid cols={2} className="margin-top--lg">
+                    <FeatureGridItem>
+                        <h1>Protection de votre activité</h1>
+                        <h3>Nous sommes à vos cotés pour vous aider a protéger vos bien et votre équipe</h3>
+                        <Link className="mkBtn mkBtn--primary" to="/contact">
+                            Prendre RDV
+                        </Link>
+                    </FeatureGridItem>
+                    <FeatureGridItem>
+                        <MediaImage
+                            src="/img/room_audio.png"
+                            alt="Appareil auditif"
+                            ratio="1:1" />
+                    </FeatureGridItem>
+                </FeatureGrid>
             </main>
         </Layout >
     );

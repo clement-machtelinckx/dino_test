@@ -4,7 +4,7 @@
 
 .page {
   min-height: calc(100vh - var(--ifm-navbar-height));
-  background: #ffffff;
+  background: var(--mk-surface);
 }
 
 /* =========================
@@ -39,46 +39,40 @@
   display: block;
 }
 
-.logoSub {
-  margin-top: -10px;
-  font-size: 22px;
-  font-weight: 700;
-  color: rgba(11, 87, 208, 0.7);
-}
-
 /* Trait */
 .rule {
   width: 420px;
   height: 2px;
   margin: 18px auto 12px;
-  background: rgba(0, 0, 0, 0.9);
+  background: var(--ifm-font-color-base);
+  opacity: 0.9;
 }
 
 /* Distribué */
 .distrib {
   margin-bottom: 26px;
   font-size: 18px;
-  color: rgba(0, 0, 0, 0.95);
+  color: var(--mk-text);
 }
 
 .distribStrong {
   font-weight: 800;
 }
 
-/* Headings */
+/* Headings (hero) */
 .h1 {
   margin: 0;
   font-size: 54px;
   font-weight: 900;
   letter-spacing: -0.02em;
-  color: #000;
+  color: var(--mk-title);
 }
 
 .h2 {
   margin: 8px 0 6px;
   font-size: 22px;
   font-weight: 700;
-  color: #000;
+  color: var(--mk-title);
 }
 
 .h3 {
@@ -86,20 +80,20 @@
   font-size: 44px;
   font-weight: 900;
   letter-spacing: -0.02em;
-  color: #000;
+  color: var(--mk-title);
 }
 
 /* Text box */
 .textBox {
   padding: 18px 22px;
-  background: rgba(255, 255, 255, 0.76);
+  background: transparent;
 }
 
 .p {
   margin: 0 0 12px;
   font-size: 16px;
   line-height: 1.85;
-  color: rgba(0, 0, 0, 0.92);
+  color: var(--mk-text);
 }
 
 .p:last-child {
@@ -111,106 +105,40 @@
   font-size: 16px;
   line-height: 1.85;
   font-weight: 800;
-  color: rgba(0, 0, 0, 0.96);
-
+  color: var(--mk-text);
+  text-decoration: underline;
   text-underline-offset: 3px;
 }
 
-/* CTA */
+/* CTA Row (le bouton est global: .mkBtn) */
 .ctaRow {
   margin-top: 18px;
   display: flex;
   justify-content: center;
 }
 
-.ctaButton {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px 26px;
-  border-radius: 999px;
-  text-decoration: none;
-  font-weight: 800;
-  letter-spacing: 0.02em;
-
-  background: rgba(11, 87, 208, 0.6);
-  color: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
-  border: 1px solid rgba(11, 87, 208, 0.2);
-}
-
-.ctaButton:hover {
-  text-decoration: none;
-  opacity: 0.95;
-}
-
-.ctaArrow {
-  font-size: 18px;
-  line-height: 1;
-}
-
 /* =========================
    SECTIONS (2 blocs)
 ========================= */
 
-.twoBlocksSection {
-  --title-color: #1f3f8a;
-  --text-color: rgba(0, 0, 0, 0.88);
-  --gap: 36px;
-  /* ✅ gap uniform */
-  --block-space: 44px;
-  /* ✅ espace entre bloc1 et bloc2 */
-
-  padding: 58px 0 30px;
+.block {
+  margin-top: 44px;
 }
 
-.sectionTitle {
-  margin: 0 0 28px;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 900;
-  letter-spacing: 0.02em;
-  font-size: 28px;
-  color: var(--title-color);
-}
-
-.sectionTitleAlt {
-  margin: 0 0 18px;
-  text-transform: uppercase;
-  font-weight: 900;
-  letter-spacing: 0.02em;
-  font-size: 28px;
-  color: var(--title-color);
-}
-
-/* Un seul style de grille pour les 2 blocs */
 .blockGrid {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
-  gap: var(--gap);
+  gap: 36px;
   align-items: center;
 }
 
 
-
-.block+.block {
-  margin-top: var(--block-space);
-  /* ✅ même espacement entre blocks */
+.blockGridReverse {
+  grid-template-columns: 0.8fr 1.2fr;
 }
 
 .blockText {
   max-width: 680px;
-}
-
-.blockP {
-  margin: 0 0 14px;
-  line-height: 1.85;
-  font-size: 16px;
-  color: var(--text-color);
-}
-
-.blockP:last-child {
-  margin-bottom: 0;
 }
 
 .blockMedia {
@@ -219,7 +147,7 @@
   align-items: center;
 }
 
-/* Diagrammes : ne pas réutiliser .logo */
+/* Diagram */
 .diagram {
   width: min(360px, 100%);
 }
@@ -231,7 +159,7 @@
 }
 
 /* =========================
-   Responsive (UNE seule zone)
+   Responsive
 ========================= */
 
 @media (max-width: 996px) {
@@ -241,10 +169,6 @@
 
   .logo {
     height: 76px;
-  }
-
-  .logoSub {
-    font-size: 20px;
   }
 
   .rule {
@@ -268,20 +192,10 @@
     font-size: 15px;
   }
 
-  .twoBlocksSection {
-    padding: 44px 0 20px;
-    --gap: 20px;
-    --block-space: 34px;
-  }
-
-  .sectionTitle,
-  .sectionTitleAlt {
-    font-size: 22px;
-  }
-
   .blockGrid,
   .blockGridReverse {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
 
   .blockText {

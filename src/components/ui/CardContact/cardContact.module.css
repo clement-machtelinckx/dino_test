@@ -1,0 +1,64 @@
+.card {
+    background: var(--mk-surface);
+    border: 1px solid var(--mk-border);
+    border-radius: var(--mk-radius-md);
+    padding: 22px 18px 18px;
+
+    box-shadow: var(--mk-shadow-sm);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+
+    transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--mk-shadow-md);
+}
+
+.iconWrap {
+    width: 54px;
+    height: 54px;
+    border-radius: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--ifm-color-primary);
+    background: var(--mk-soft-bg);
+    border: 1px solid var(--mk-border);
+}
+
+.title {
+    text-align: center;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--mk-title);
+    line-height: 1.2;
+}
+
+.cta {
+    margin-top: 2px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    /* adapte le mkBtn pour coller à la maquette (bouton plus "compact") */
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card {
+        transition: none;
+    }
+
+    .card:hover {
+        transform: none;
+    }
+}

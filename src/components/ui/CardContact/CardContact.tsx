@@ -1,31 +1,45 @@
 import React from "react";
 import clsx from "clsx";
+import Link from "@docusaurus/Link";
+import { Icon } from "@mdi/react";
+
 import styles from "./cardContact.module.css";
+
+type Props = {
+    title: string;
+    iconPath: string;
+    href: string; // tel: mailto: ou https:
+    buttonLabel: string;
+    className?: string;
+};
 
 export function CardContact({
     title,
-    children,
+    iconPath,
+    href,
+    buttonLabel,
     className,
-    topIcon,
-}: {
-    title?: React.ReactNode;
-    children: React.ReactNode;
-    className?: string;
-    topIcon?: React.ReactNode;
-}) {
+}: Props): JSX.Element {
+    const isExternal = href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("tel:");
+
     return (
-        <div className={clsx("card", styles.mkCard, className)}>
-            <div className={styles.top}>
-                {topIcon ? <div className={styles.icon}>{topIcon}</div> : null}
+        <div className={clsx(styles.card, className)}>
+            <div className={styles.iconWrap} aria-hidden="true">
+                <Icon path={iconPath} size={1.15} />
             </div>
 
-            {title ? (
-                <div className="card__header">
-                    <h3 className={styles.title}>{title}</h3>
-                </div>
-            ) : null}
+            <div className={styles.title}>{title}</div>
 
-            <div className="card__body">{children}</div>
+            {/* Le clic principal est sur le bouton (comme la maquette) */}
+            <div className={styles.cta}>
+                <Link
+                    className={clsx("mkBtn", styles.btn)}
+                    to={isExternal ? undefined : href}
+                    href={isExternal ? href : undefined}
+                >
+                    {buttonLabel} <span className="mkBtnArrow" aria-hidden="true">→</span>
+                </Link>
+            </div>
         </div>
     );
 }
