@@ -1,0 +1,142 @@
+.footer {
+    margin-top: 56px;
+    border-top: 1px solid var(--ifm-color-emphasis-200);
+    background: linear-gradient(180deg,
+            rgba(11, 87, 208, 0.06),
+            rgba(11, 87, 208, 0.02));
+}
+
+.inner {
+    padding: 44px 0 22px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr 1fr;
+    gap: 22px;
+    align-items: start;
+}
+
+.brand {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding-right: 14px;
+}
+
+.brandLink {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.logo {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    padding: 8px;
+    background: var(--ifm-background-color);
+    border: 1px solid var(--ifm-color-emphasis-200);
+    object-fit: contain;
+}
+
+.brandName {
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    color: var(--ifm-font-color-base);
+    line-height: 1.1;
+}
+
+.tagline {
+    margin-top: 4px;
+    font-size: 13px;
+    color: var(--ifm-color-emphasis-700);
+    line-height: 1.35;
+}
+
+.cta {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.col {
+    background: var(--ifm-background-color);
+    border: 1px solid var(--ifm-color-emphasis-200);
+    border-radius: 16px;
+    padding: 16px 16px 14px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.colTitle {
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    margin-bottom: 10px;
+}
+
+.links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.link {
+    color: var(--ifm-color-emphasis-800);
+    text-decoration: none;
+}
+
+.link:hover {
+    color: var(--ifm-color-primary);
+    text-decoration: none;
+}
+
+.bottom {
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px solid var(--ifm-color-emphasis-200);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.copy {
+    font-size: 13px;
+    color: var(--ifm-color-emphasis-700);
+}
+
+.bottomLinks {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bottomLink {
+    font-size: 13px;
+    color: var(--ifm-color-emphasis-700);
+    text-decoration: none;
+}
+
+.bottomLink:hover {
+    color: var(--ifm-color-primary);
+    text-decoration: none;
+}
+
+.sep {
+    opacity: 0.55;
+}
+
+@media (max-width: 996px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .brand {
+        padding-right: 0;
+    }
+}
