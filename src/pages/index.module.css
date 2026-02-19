@@ -1,23 +1,308 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
+/* =========================
+   Page base
+========================= */
 
-.heroBanner {
-  padding: 4rem 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+.page {
+  min-height: calc(100vh - var(--ifm-navbar-height));
+  background: #ffffff;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
+/* =========================
+   HERO (haut de page)
+========================= */
+
+.hero {
+  padding: 56px 0 70px;
+}
+
+.container {
+  position: relative;
+}
+
+.center {
+  max-width: 820px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Logo */
+.logoWrap {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.logo {
+  height: 88px;
+  width: auto;
+  display: block;
+}
+
+.logoSub {
+  margin-top: -10px;
+  font-size: 22px;
+  font-weight: 700;
+  color: rgba(11, 87, 208, 0.7);
+}
+
+/* Trait */
+.rule {
+  width: 420px;
+  height: 2px;
+  margin: 18px auto 12px;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+/* Distribué */
+.distrib {
+  margin-bottom: 26px;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.95);
+}
+
+.distribStrong {
+  font-weight: 800;
+}
+
+/* Headings */
+.h1 {
+  margin: 0;
+  font-size: 54px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: #000;
+}
+
+.h2 {
+  margin: 8px 0 6px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #000;
+}
+
+.h3 {
+  margin: 0 0 22px;
+  font-size: 44px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: #000;
+}
+
+/* Text box */
+.textBox {
+  padding: 18px 22px;
+  background: rgba(255, 255, 255, 0.76);
+}
+
+.p {
+  margin: 0 0 12px;
+  font-size: 16px;
+  line-height: 1.85;
+  color: rgba(0, 0, 0, 0.92);
+}
+
+.p:last-child {
+  margin-bottom: 0;
+}
+
+.pStrong {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.85;
+  font-weight: 800;
+  color: rgba(0, 0, 0, 0.96);
+
+  text-underline-offset: 3px;
+}
+
+/* CTA */
+.ctaRow {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 26px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+
+  background: rgba(11, 87, 208, 0.6);
+  color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(11, 87, 208, 0.2);
+}
+
+.ctaButton:hover {
+  text-decoration: none;
+  opacity: 0.95;
+}
+
+.ctaArrow {
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* =========================
+   SECTIONS (2 blocs)
+========================= */
+
+.twoBlocksSection {
+  --title-color: #1f3f8a;
+  --text-color: rgba(0, 0, 0, 0.88);
+  --gap: 36px;
+  /* ✅ gap uniform */
+  --block-space: 44px;
+  /* ✅ espace entre bloc1 et bloc2 */
+
+  padding: 58px 0 30px;
+}
+
+.sectionTitle {
+  margin: 0 0 28px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  font-size: 28px;
+  color: var(--title-color);
+}
+
+.sectionTitleAlt {
+  margin: 0 0 18px;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  font-size: 28px;
+  color: var(--title-color);
+}
+
+/* Un seul style de grille pour les 2 blocs */
+.blockGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: var(--gap);
+  align-items: center;
+}
+
+
+
+.block+.block {
+  margin-top: var(--block-space);
+  /* ✅ même espacement entre blocks */
+}
+
+.blockText {
+  max-width: 680px;
+}
+
+.blockP {
+  margin: 0 0 14px;
+  line-height: 1.85;
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+.blockP:last-child {
+  margin-bottom: 0;
+}
+
+.blockMedia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Diagrammes : ne pas réutiliser .logo */
+.diagram {
+  width: min(360px, 100%);
+}
+
+.blockCta {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+/* =========================
+   Responsive (UNE seule zone)
+========================= */
+
+@media (max-width: 996px) {
+  .hero {
+    padding: 44px 0 56px;
+  }
+
+  .logo {
+    height: 76px;
+  }
+
+  .logoSub {
+    font-size: 20px;
+  }
+
+  .rule {
+    width: 300px;
+  }
+
+  .h1 {
+    font-size: 44px;
+  }
+
+  .h3 {
+    font-size: 34px;
+  }
+
+  .textBox {
+    padding: 16px 16px;
+  }
+
+  .p,
+  .pStrong {
+    font-size: 15px;
+  }
+
+  .twoBlocksSection {
+    padding: 44px 0 20px;
+    --gap: 20px;
+    --block-space: 34px;
+  }
+
+  .sectionTitle,
+  .sectionTitleAlt {
+    font-size: 22px;
+  }
+
+  .blockGrid,
+  .blockGridReverse {
+    grid-template-columns: 1fr;
+  }
+
+  .blockText {
+    max-width: none;
+  }
+
+  .diagram {
+    width: min(320px, 100%);
   }
 }
 
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@media (max-width: 480px) {
+  .h1 {
+    font-size: 40px;
+  }
+
+  .h3 {
+    font-size: 30px;
+  }
+
+  .rule {
+    width: 250px;
+  }
 }

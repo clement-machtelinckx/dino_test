@@ -1,108 +1,132 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
+/* =========================================================
+   Design tokens (vitrine)
+   - Couleurs: dérivées d'Infima
+   - Pas de hardcode dans les CSS modules
+========================================================= */
 
-/* You can override the default Infima variables here. */
-/* :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-} */
-
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-/* [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-} */
-
-/* Brand palette (Markassur-ish) */
 :root {
-  /* Primary (base: #0b57d0) */
-  --ifm-color-primary: #0b57d0;
-  --ifm-color-primary-dark: #0a4db8;
-  --ifm-color-primary-darker: #0945a4;
-  --ifm-color-primary-darkest: #073b8c;
-  --ifm-color-primary-light: #0c61e8;
-  --ifm-color-primary-lighter: #166bf3;
-  --ifm-color-primary-lightest: #5593f6;
+  /* Text */
+  --mk-text: var(--ifm-font-color-base);
+  --mk-text-muted: var(--ifm-color-emphasis-700);
 
-  /* Primary contrast (used by some components/admonitions) */
-  --ifm-color-primary-contrast-background: #e7eefa;
-  --ifm-color-primary-contrast-foreground: #073b8c;
+  /* Titles */
+  --mk-title: #000;
+  /* si tu veux 100% Infima: var(--ifm-font-color-base) */
+  --mk-title-accent: var(--ifm-color-primary);
 
-  /* Secondary (muted blue, derived) */
-  --ifm-color-secondary: #6a90cd;
-  --ifm-color-secondary-dark: #5b85c8;
-  --ifm-color-secondary-darker: #4b79c3;
-  --ifm-color-secondary-darkest: #3f6ebb;
-  --ifm-color-secondary-light: #81a1d5;
-  --ifm-color-secondary-lighter: #90acda;
-  --ifm-color-secondary-lightest: #a7bee2;
+  /* Surfaces / borders */
+  --mk-surface: var(--ifm-background-color);
+  --mk-border: var(--ifm-color-emphasis-300);
 
-  /* Secondary contrast */
-  --ifm-color-secondary-contrast-background: #f0f4fa;
-  --ifm-color-secondary-contrast-foreground: #3f6ebb;
+  /* Shadows */
+  --mk-shadow-sm: 0 8px 18px rgba(0, 0, 0, 0.10);
+  --mk-shadow-md: 0 12px 26px rgba(0, 0, 0, 0.14);
 
-  /* Optional but nice: links follow primary */
-  --ifm-link-color: var(--ifm-color-primary);
-  --ifm-link-hover-color: var(--ifm-color-primary-light);
+  /* Radius */
+  --mk-radius-sm: 12px;
+  --mk-radius-md: 16px;
+  --mk-radius-pill: 999px;
 
-  /* Keep your existing settings */
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  /* Spacing */
+  --mk-space-2: 8px;
+  --mk-space-3: 12px;
+  --mk-space-4: 16px;
+  --mk-space-5: 20px;
+  --mk-space-6: 24px;
+  --mk-space-8: 32px;
+  --mk-space-10: 40px;
+
+  /* Buttons */
+  --mk-btn-bg: color-mix(in srgb, var(--ifm-color-primary) 65%, white);
+  --mk-btn-fg: rgba(255, 255, 255, 0.92);
+  --mk-btn-border: color-mix(in srgb, var(--ifm-color-primary) 22%, transparent);
 }
 
-/* Dark mode */
 [data-theme='dark'] {
-  /* In dark mode, primary should be lighter for contrast */
-  --ifm-color-primary: #5593f6;
-  --ifm-color-primary-dark: #3d84f5;
-  --ifm-color-primary-darker: #2977f4;
-  --ifm-color-primary-darkest: #1168f2;
-  --ifm-color-primary-light: #6da2f7;
-  --ifm-color-primary-lighter: #81aff8;
-  --ifm-color-primary-lightest: #99befa;
-
-  --ifm-color-primary-contrast-background: rgba(11, 87, 208, 0.22);
-  --ifm-color-primary-contrast-foreground: #99befa;
-
-  /* Secondary in dark mode (a bit darker/more muted) */
-  --ifm-color-secondary: #4b79c3;
-  --ifm-color-secondary-dark: #3f6ebb;
-  --ifm-color-secondary-darker: #3663b1;
-  --ifm-color-secondary-darkest: #2d569b;
-  --ifm-color-secondary-light: #5b85c8;
-  --ifm-color-secondary-lighter: #6a90cd;
-  --ifm-color-secondary-lightest: #81a1d5;
-
-  --ifm-color-secondary-contrast-background: rgba(106, 144, 205, 0.18);
-  --ifm-color-secondary-contrast-foreground: #81a1d5;
-
-  --ifm-link-color: var(--ifm-color-primary);
-  --ifm-link-hover-color: var(--ifm-color-primary-lightest);
-
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --mk-title: var(--ifm-font-color-base);
+  --mk-btn-bg: color-mix(in srgb, var(--ifm-color-primary) 80%, black);
+  --mk-btn-fg: rgba(255, 255, 255, 0.92);
+  --mk-btn-border: color-mix(in srgb, var(--ifm-color-primary) 30%, transparent);
 }
 
-.mkRow {
-  display: flex;
+/* =========================================================
+   Global utility classes (standard)
+   - OK dans custom.css: utilitaires + conventions globales
+========================================================= */
+
+/* Sections */
+.mkSection {
+  padding: var(--mk-space-10) 0;
+}
+
+.mkSectionTight {
+  padding: var(--mk-space-8) 0;
+}
+
+/* Titles */
+.mkTitle {
+  margin: 0 0 var(--mk-space-6);
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--mk-title-accent);
+}
+
+.mkH1 {
+  margin: 0;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: var(--mk-title);
+}
+
+.mkH2 {
+  margin: 0;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: var(--mk-title);
+}
+
+/* Text */
+.mkText {
+  margin: 0 0 var(--mk-space-4);
+  line-height: 1.85;
+  color: var(--mk-text);
+}
+
+.mkTextMuted {
+  color: var(--mk-text-muted);
+}
+
+/* Button (link/button compatible) */
+.mkBtn {
+  display: inline-flex;
   align-items: center;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 16px;
-  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 12px 26px;
+  border-radius: var(--mk-radius-pill);
+  text-decoration: none;
+
+  font-weight: 800;
+  letter-spacing: 0.02em;
+
+  background: var(--mk-btn-bg);
+  color: var(--mk-btn-fg);
+  border: 1px solid var(--mk-btn-border);
+  box-shadow: var(--mk-shadow-sm);
+}
+
+.mkBtn:hover {
+  text-decoration: none;
+  opacity: 0.95;
+}
+
+.mkBtn:active {
+  transform: translateY(1px);
+}
+
+.mkBtnArrow {
+  font-size: 18px;
+  line-height: 1;
 }
