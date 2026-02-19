@@ -106,7 +106,6 @@
   line-height: 1.85;
   font-weight: 800;
   color: var(--mk-text);
-  text-decoration: underline;
   text-underline-offset: 3px;
 }
 

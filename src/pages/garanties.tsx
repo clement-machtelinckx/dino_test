@@ -1,6 +1,11 @@
 import type { ReactNode } from "react";
 import Layout from "@theme/Layout";
 import Icon from '@mdi/react';
+import {
+    mdiMapMarkerQuestionOutline,
+    mdiIncognito,
+    mdiCogOutline,
+} from "@mdi/js";
 import { MediaImage } from "../components/ui/MediaImage/MediaImage";
 import { mdiSkull } from '@mdi/js';
 import { Card } from "../components/ui/Card/Card";
@@ -44,7 +49,7 @@ export default function Garanties(): ReactNode {
                 <FeatureGrid cols={3}>
                     <FeatureGridItem >
                         <Card title="GARANTIE PERTE"
-                            topIcon={< Icon path={mdiSkull} />}
+                            topIcon={< Icon path={mdiMapMarkerQuestionOutline} />}
                         >
                             <p>
                                 Cette couverture est pertinente pour des appareils de petite taille,
@@ -57,7 +62,7 @@ export default function Garanties(): ReactNode {
 
                     <FeatureGridItem>
                         <Card title="GARANTIE VOL"
-                            topIcon={< Icon path={mdiSkull} />}
+                            topIcon={< Icon path={mdiIncognito} />}
                         >
                             <p>
                                 La garantie vol protège l'assuré contre la soustraction frauduleuse de
@@ -70,7 +75,7 @@ export default function Garanties(): ReactNode {
 
                     <FeatureGridItem >
                         <Card title="GARANTIE CASSE"
-                            topIcon={< Icon path={mdiSkull} />}
+                            topIcon={< Icon path={mdiCogOutline} />}
                         >
                             <p>
                                 La garantie casse couvre les dégâts matériels subis par l'audioprothèse

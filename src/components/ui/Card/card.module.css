@@ -33,6 +33,7 @@
     inset: 0;
     display: grid;
     place-items: center;
+    color: var(--mk-bar-fg);
 }
 
 .icon>* {
@@ -45,4 +46,17 @@
     font-weight: 800;
     letter-spacing: 0.02em;
     text-transform: uppercase;
+}
+
+.blockIcon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+
+    background: var(--mk-bar-icon-bg);
+    color: var(--mk-bar-fg);
 }
